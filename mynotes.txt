@@ -1,0 +1,15 @@
+differences of v6 to v5
+
+1. <Switch> is not being used instead use <Routes>
+2. components are no longer nested in Routes
+> instead passed into an element={} property which contains
+> JSX it can be a page component tag or inlined JSX
+3. we dont need exact flag on Route anymore since it is now default
+4. <Redirect> is replaced with <Navigate>
+5. Conditional redirects ex. checking is the user is logged in
+> using ternary expression ex. cartIsEmpty is a boolen state
+> cartIsEmpty ? <Navigate to="/products" /> : <p>Checkout</p>
+
+6. useHistory() hook is replaced with useNavigate() hook
+7. Nested Routes paths become relative to the parent route path
+8. useRouteMatch() deprecated
